@@ -37,7 +37,18 @@ router.post('/', (req, res) => {
                 id: v4(),
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
-                email: req.body.email
+                email: req.body.email,
+                phoneNumber: req.body.phoneNumber,
+                password: req.body.password,
+                subject: req.body.subject,
+                group:[
+                    {
+                        title: req.body.group[0].title,
+                        time: req.body.group[0].time,
+                        students: req.body.group[0].students 
+                    }
+                ]
+
             }
             data = JSON.parse(data)
             data.push(newData)
@@ -97,7 +108,17 @@ router.put('/:id', (req, res) => {
                     id: req.params.id,
                     firstName: body.firstName ? body.firstName : data[index].firstName,
                     lastName: body.lastName ? body.lastName : data[index].lastName,
-                    email: body.email ? body.email : data[index].email
+                    email: body.email ? body.email : data[index].email,
+                    phoneNumber: body.phoneNumber? body.phoneNumber : data[index].phoneNumber,
+                    password: body.password? body.password : data[index].password,
+                    subject: body.subject? body.subject : data[index].subject,
+                    group:[
+                        {
+                            title: body.group[0].title? body.group[0].title: data[index].group[0].title,
+                            time: body.group[0].time? body.group[0].time: data[index].group[0].time,
+                            students: body.group[0].students ? body.group[0].students : data[index].group[0].students
+                        }
+                    ]
                 }
                 data[index] = putData
                 res.json(data)
