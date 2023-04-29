@@ -1,1 +1,20 @@
-[{"id":"bf939cd1-2a59-49c6-ae20-07d3ccf4ae44","firstName":"Nurmuhammad","lastName":"Qosimov","email":"exsample@gmail.com","phoneNumber":"+998991234567","password":"password","subject":"subject","group":[{"title":"title","time":"2-avgust 2007-yil","students":[]}]}]
+[
+    {
+        "id": "bf939cd1-2a59-49c6-ae20-07d3ccf4ae44",
+        "firstName": "Nurmuhammad",
+        "lastName": "Qosimov",
+        "email": "ucer@exsample.com",
+        "phoneNumber": "+998991234567",
+        "password": "password",
+        "subject": "subject",
+        "group": [
+            {
+                "title": "Nurmuhammad",
+                "time": "2-avgust 2007-yil",
+                "students": [
+                    "Nurmuhammad"
+                ]
+            }
+        ]
+    }
+]
